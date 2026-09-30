@@ -1,0 +1,21 @@
+{
+  "name": "uche-anya-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build && node scripts/build-pages.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "playwright test --workers=1",
+    "audit:a11y": "node scripts/audit-accessibility.mjs",
+    "format": "prettier --write index.html src tests scripts package.json vercel.json README.md playwright.config.js",
+    "format:check": "prettier --check index.html src tests scripts package.json vercel.json README.md playwright.config.js"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.58.0",
+    "prettier": "^3.9.9",
+    "vite": "^7.3.0"
+  }
+}

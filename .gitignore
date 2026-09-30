@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vercel/
+test-results/
+.env*
+WhatsApp*.jpeg
+AUDIT.md
+PROJECT_CONTENT_REVIEW.md

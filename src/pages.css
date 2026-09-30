@@ -1,0 +1,206 @@
+.header nav a[aria-current="page"] {
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 1px;
+}
+[data-page="home"] .project-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+[data-page="home"] .project-card .project-heading h3 {
+  font-size: 23px;
+}
+[data-page="home"] .project-card .project-visual {
+  height: 230px;
+  padding: 20px;
+}
+.home-about {
+  padding-block: 85px;
+  border-top: 1px solid var(--line);
+}
+.home-about h2 {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 25px;
+  letter-spacing: -0.04em;
+}
+.home-about h2 em {
+  color: var(--orange);
+}
+.home-about > p:not(.eyebrow) {
+  max-width: 620px;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 26px;
+}
+[data-page="projects"] .work {
+  padding-top: 80px;
+}
+[data-page="projects"] .section-top {
+  align-items: start;
+  gap: 40px;
+}
+[data-page="projects"] .section-top h1 {
+  font-size: clamp(45px, 6vw, 76px);
+  max-width: 760px;
+}
+[data-page="projects"] .section-top > p {
+  max-width: 290px;
+  line-height: 1.9;
+}
+[data-page="about"] #about {
+  padding-top: 80px;
+  border-top: 0;
+  background: transparent;
+}
+[data-page="about"] #about h1 {
+  font-size: clamp(44px, 5vw, 70px);
+}
+.case-study {
+  padding-block: 38px 70px;
+}
+.breadcrumbs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.breadcrumbs a:hover,
+.case-index a:hover {
+  color: var(--orange);
+}
+.case-header {
+  max-width: 930px;
+  padding-block: 64px 55px;
+}
+.case-header h1 {
+  font-size: clamp(42px, 6vw, 80px);
+  letter-spacing: -0.05em;
+}
+.case-intro {
+  font-size: clamp(17px, 2vw, 22px);
+  color: #c2cabc;
+  line-height: 1.75;
+  margin-block: 30px;
+}
+.case-header .tags {
+  flex-wrap: wrap;
+}
+.case-header .tags span {
+  background: #ffffff08;
+  color: #c5cfbb;
+  border-color: var(--line);
+  padding: 8px 12px;
+}
+.case-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 750px);
+  gap: 70px;
+  border-top: 1px solid var(--line);
+  padding-top: 50px;
+}
+.case-index {
+  align-self: start;
+  position: sticky;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.case-index .eyebrow {
+  margin-bottom: 8px;
+}
+.case-index .text-link {
+  align-self: start;
+  margin-top: 12px;
+}
+.case-body section {
+  margin-bottom: 45px;
+  scroll-margin-top: 40px;
+}
+.case-body h2 {
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-top: 0;
+}
+.case-body p {
+  line-height: 1.95;
+  color: #bdc8b9;
+  font-size: 16px;
+}
+.case-body .project-flow {
+  background: #ffffff05;
+  border: 1px solid var(--line);
+  margin-bottom: 45px;
+  gap: 13px;
+}
+.case-body .project-flow b {
+  color: #c5cfbb;
+}
+.case-body .source-note {
+  font-size: 12px;
+}
+.case-end {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  margin-top: 60px;
+  padding-top: 28px;
+}
+.missing-page {
+  padding-block: 100px;
+}
+@media (max-width: 1000px) {
+  [data-page="home"] .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  [data-page="home"] .project-card:last-child {
+    grid-column: 1 / -1;
+  }
+  .case-layout {
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 35px;
+  }
+}
+@media (max-width: 760px) {
+  .header nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  [data-page="home"] .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-about {
+    padding-block: 55px;
+  }
+  [data-page="projects"] .work,
+  [data-page="about"] #about {
+    padding-top: 45px;
+  }
+  [data-page="projects"] .section-top {
+    display: block;
+  }
+  .case-header {
+    padding-block: 40px;
+  }
+  .case-layout {
+    display: block;
+    padding-top: 30px;
+  }
+  .case-index {
+    position: static;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--line);
+  }
+  .case-body p {
+    font-size: 15px;
+  }
+}

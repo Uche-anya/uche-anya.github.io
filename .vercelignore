@@ -1,0 +1,11 @@
+node_modules/
+dist/
+test-results/
+tests/
+scripts/
+.env*
+AUDIT.md
+PROJECT_CONTENT_REVIEW.md
+README.md
+playwright.config.js
+WhatsApp Image*.jpeg
